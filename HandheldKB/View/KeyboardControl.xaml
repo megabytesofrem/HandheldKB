@@ -1,0 +1,201 @@
+﻿<UserControl x:Class="HandheldKB.View.KeyboardControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HandheldKB.View"
+             xmlns:util="clr-namespace:HandheldKB.Util"
+             mc:Ignorable="d" 
+             d:DesignHeight="399" d:DesignWidth="1920">
+
+    <UserControl.Resources>
+        <util:DimColorConverter x:Key="DimColorConverter"/>
+
+        <Style x:Key="DefaultStyle" TargetType="Grid">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <SolidColorBrush Color="Black" Opacity="0.9"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid Name="KeyboardGrid" Style="{StaticResource DefaultStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- First row -->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.6*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.4*"/>
+            </Grid.ColumnDefinitions>
+
+            <local:KeyboardButton Grid.Column="0" KeyLabel="Esc" ShiftKeyLabel="`" />
+            <local:KeyboardButton Grid.Column="1" KeyLabel="1" ShiftKeyLabel="!" />
+            <local:KeyboardButton Grid.Column="2" KeyLabel="2" ShiftKeyLabel="@" />
+            <local:KeyboardButton Grid.Column="3" KeyLabel="3" ShiftKeyLabel="#" />
+            <local:KeyboardButton Grid.Column="4" KeyLabel="4" ShiftKeyLabel="$" />
+            <local:KeyboardButton Grid.Column="5" KeyLabel="5" ShiftKeyLabel="%" />
+            <local:KeyboardButton Grid.Column="6" KeyLabel="6" ShiftKeyLabel="^" />
+            <local:KeyboardButton Grid.Column="7" KeyLabel="7" ShiftKeyLabel="&amp;" />
+            <local:KeyboardButton Grid.Column="8" KeyLabel="8" ShiftKeyLabel="*" />
+            <local:KeyboardButton Grid.Column="9" KeyLabel="9" ShiftKeyLabel="(" />
+            <local:KeyboardButton Grid.Column="10" KeyLabel="0" ShiftKeyLabel=")" />
+            <local:KeyboardButton Grid.Column="11" KeyLabel="-" ShiftKeyLabel="_" />
+            <local:KeyboardButton Grid.Column="12" KeyLabel="=" ShiftKeyLabel="+" />
+            <local:KeyboardButton Grid.Column="13" KeyLabel="⌫" />
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.4*"/>
+            </Grid.ColumnDefinitions>
+
+            <local:KeyboardButton Grid.Column="0" KeyLabel="Tab" />
+            <local:KeyboardButton Grid.Column="1" KeyLabel="Q" />
+            <local:KeyboardButton Grid.Column="2" KeyLabel="W" />
+            <local:KeyboardButton Grid.Column="3" KeyLabel="E" />
+            <local:KeyboardButton Grid.Column="4" KeyLabel="R" />
+            <local:KeyboardButton Grid.Column="5" KeyLabel="T" />
+            <local:KeyboardButton Grid.Column="6" KeyLabel="Y" />
+            <local:KeyboardButton Grid.Column="7" KeyLabel="U" />
+            <local:KeyboardButton Grid.Column="8" KeyLabel="I" />
+            <local:KeyboardButton Grid.Column="9" KeyLabel="O" />
+            <local:KeyboardButton Grid.Column="10" KeyLabel="P"/>
+            <local:KeyboardButton Grid.Column="11" KeyLabel="[" ShiftKeyLabel="%lbrace%" />
+            <local:KeyboardButton Grid.Column="12" KeyLabel="]" ShiftKeyLabel="&#125;" />
+            <local:KeyboardButton Grid.Column="13" KeyLabel="\" />
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.4*"/>
+            </Grid.ColumnDefinitions>
+
+            <local:KeyboardButton Grid.Column="0" KeyLabel="Caps" />
+            <local:KeyboardButton Grid.Column="1" KeyLabel="A" />
+            <local:KeyboardButton Grid.Column="2" KeyLabel="S" />
+            <local:KeyboardButton Grid.Column="3" KeyLabel="D" />
+            <local:KeyboardButton Grid.Column="4" KeyLabel="F" />
+            <local:KeyboardButton Grid.Column="5" KeyLabel="G" />
+            <local:KeyboardButton Grid.Column="6" KeyLabel="H" />
+            <local:KeyboardButton Grid.Column="7" KeyLabel="J" />
+            <local:KeyboardButton Grid.Column="8" KeyLabel="K" />
+            <local:KeyboardButton Grid.Column="9" KeyLabel="L" />
+            <local:KeyboardButton Grid.Column="10" KeyLabel=";" ShiftKeyLabel=":"/>
+            <local:KeyboardButton Grid.Column="11" KeyLabel="'" ShiftKeyLabel="&quot;" />
+            <local:KeyboardButton Grid.Column="12" KeyLabel="⏎" />
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.6*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.6*"/>
+            </Grid.ColumnDefinitions>
+
+            <local:KeyboardButton Grid.Column="0" KeyLabel="Shift" />
+            <local:KeyboardButton Grid.Column="1" KeyLabel="Z" />
+            <local:KeyboardButton Grid.Column="2" KeyLabel="X" />
+            <local:KeyboardButton Grid.Column="3" KeyLabel="C" />
+            <local:KeyboardButton Grid.Column="4" KeyLabel="V" />
+            <local:KeyboardButton Grid.Column="5" KeyLabel="B" />
+            <local:KeyboardButton Grid.Column="6" KeyLabel="N" />
+            <local:KeyboardButton Grid.Column="7" KeyLabel="M" />
+            <local:KeyboardButton Grid.Column="8" KeyLabel="," ShiftKeyLabel="&lt;" />
+            <local:KeyboardButton Grid.Column="9" KeyLabel="." ShiftKeyLabel="&gt;" />
+            <local:KeyboardButton Grid.Column="10" KeyLabel="?" ShiftKeyLabel="/"/>
+            <local:KeyboardButton Grid.Column="11" KeyLabel="Shift" />
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <local:KeyboardButton Grid.Column="0" KeyLabel="Ctrl"/>
+            <local:KeyboardButton Grid.Column="1" KeyLabel="Win"/>
+            <local:KeyboardButton Grid.Column="2" KeyLabel="Alt"/>
+            <local:KeyboardButton Grid.Column="3" KeyLabel="Space"/>
+            <local:KeyboardButton Grid.Column="4" KeyLabel="Alt"/>
+            <local:KeyboardButton Grid.Column="5" KeyLabel="Toggle"/>
+        </Grid>
+    </Grid>
+</UserControl>
